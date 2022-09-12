@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    padding-left: 100px;
+    gap:10px;
+    margin-top: 50px;
+    margin-left: -50px;
+}
+.Forget_password {
+  padding-left: 160px;
+  margin-top: 2px;
+}
+.btn {
+    width: 300px;
+height: 37px;
+    margin-left: -2px;
+    margin-top: 5px;
+    color: white;
+    background-color: #8F2B2F;
+  }
+    .other_btn {
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+    }
+  .facebook_btn {
+       
+    gap:10px;
+    width: 150px;
+    height: 50px;
+    background-color:#4266B2 ;
+  }
+  .google_btn {
+    
+    width: 150px;
+    height: 50px;
+  }
+  .login_btn{
+    border: none;
+   width: 100%;
+   height: 12%;
+   background-color:#a03037;
+   
+}
+.login-btn{
+   width: 100%;
+   height: 12%;
+   background-color:#a03037;
+   margin-right: 15px;
+   width: 100%;
+   height: 100%;
+   
+}

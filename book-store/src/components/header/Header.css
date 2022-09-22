@@ -1,0 +1,11 @@
+.Search {
+    border-radius: 5px;   
+   }
+   .cartIcon {
+    display:flex;
+    flex-direction: row;
+    margin-left: 210px;
+    gap: 40px;
+    /* margin-top: 20px; */
+
+   } 

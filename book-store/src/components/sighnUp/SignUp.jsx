@@ -17,7 +17,8 @@ function SignUp(props) {
       lastNameError:false,
       MobileNumberError:false,
       emailError:false,
-      passwordError:false
+      passwordError:false,
+      confirmPasswordError:false,
     })
     
     const changeState = (event) => {
@@ -34,12 +35,13 @@ function SignUp(props) {
       error.MobileNumberError = text.MobileNumber === '' ? true : false;
       error.emailError = text.email === '' ? true : false;
       error.passwordError = text.password === '' ? true : false;
+      error.confirmPasswordError = text.confirm === '' ? true : false;
 
       setText({
         ...error
       })
 
-      isError = error.firstNameError || error.lastNameError || error.MobileNumberError || error.emailError || error.passwordError 
+      isError = error.firstNameError || error.lastNameError || error.MobileNumberError || error.emailError || error.passwordError || error.confirmPasswordError
       return isError;  
     }
     
@@ -69,10 +71,10 @@ function SignUp(props) {
                 
       <div className="main">
       <div className="sub-main">
-      <div className='role_part'>
+      <div className='role'>
           <TextField
            id="outlined_basic"
-          className='role'
+          className='inputFirstName'
           name='role'
           label="Role"
            variant='outlined'
@@ -90,7 +92,7 @@ function SignUp(props) {
             variant="outlined"
             size="small"
             error = {text.firstNameError}
-            helperText={text.emailError == true ? 'FirstName is required':''}
+            helperText={text.firstNameError == true ? 'FirstName is required':''}
             
             onChange={(e) => changeState(e)}
           />
@@ -122,7 +124,7 @@ function SignUp(props) {
           />
         </div>
         
-        <div className="email">
+        <div className="eemail">
           <TextField
             id="outlined-basic"
             className="inputFirstName"
@@ -149,14 +151,16 @@ function SignUp(props) {
             onChange={(e) => changeState(e)}
           />
         </div>
-        <div className='role_part'>
+        <div className='role'>
           <TextField
            id="outlined_basic"
-          className='role'
+          className='inputFirstName'
           name='confirm'
           label="confirmPassword"
            variant='outlined'
           size="small"
+          error = {text.confirmPasswordError}
+            helperText={text.confirmPasswordError == true ? 'Confirm Password is required':''}
           onChange={(e) => changeState(e)}
           />
           </div>        

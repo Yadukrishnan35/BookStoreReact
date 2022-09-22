@@ -16,7 +16,7 @@ function HomePage() {
         setactiveClick(true);
     };
     return (
-        
+        <div className='background'>
         <div className='main-container'>
             <div className='box-container'>
                 <div className='leftBox'>
@@ -45,6 +45,7 @@ function HomePage() {
                 
             </div>
 
+        </div>
         </div>
     );
 }

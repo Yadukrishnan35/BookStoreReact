@@ -7,5 +7,9 @@ class AxiosService {
     get(url, data = "",headers) {
         return axios.get(url, data, headers)
     }
+
+    put(url, data = "", headers) {
+        return axios.put(url, data, headers)
+    }
 }
 export default AxiosService;

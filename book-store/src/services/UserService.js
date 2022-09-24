@@ -4,7 +4,7 @@ const axiosService = new AxiosService();
 let baseURL = "http://127.0.0.1:8000/api"
 const header = {
     headers: {
-        token: localStorage.getItem("token")
+        Authorization: 'Bearer' + " " + localStorage.getItem('token')
     }
 }
 class UserService {

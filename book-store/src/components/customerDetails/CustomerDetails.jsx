@@ -1,9 +1,13 @@
 import { Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import UserService from '../../services/UserService';
 import './CustomerDetails.css';
+import bookImage from '../../Images/bookImage.png';
 const userservice = new UserService();
 function CustomerDetails(props) {
+
+    const [orderSummery, setOrderSummery] = useState(false);
+
     const [address, setAddress] = React.useState({
         FullName: '',
         Mobile: '',
@@ -12,7 +16,7 @@ function CustomerDetails(props) {
         Landmark: '',
         State: '',
         Pincode: '',
-        AddressType: "Work" || "Home" || "Other"
+        address_type: '',
     })
     const changeState = (event) => {
         setAddress(previousValue => {
@@ -24,28 +28,33 @@ function CustomerDetails(props) {
     const next = () => {
         let data = {
             "FullName": address.FullName,
-            "Mobile": address.Mobile,
+            "MobileNumber": address.Mobile,
             "address": address.Address,
             "city": address.City,
             "state": address.State,
             "landmark": address.Landmark,
             "pincode": address.Pincode,
-            "address_type": address.AddressType,
+            "address_type": address.address_type,
         }
         console.log("Customer is calling");
         console.log(data);
         userservice.address(data).then((response) => {
 
             console.log(response);
-
+            //setOrderSummery(true);
 
         }).catch((error) => {
             console.log(error);
         })
     }
 
-    return (
+    const ordersummery = () => {
+        setOrderSummery(true);
+    }
 
+    return (
+        
+        <div>
         <div className='adress'>
             <div className='addressbuttons'>
                 <span>Customer Details</span>
@@ -144,15 +153,15 @@ function CustomerDetails(props) {
                             name="row-radio-buttons-group"
 
                         >
-                            <FormControlLabel className='radiofont' name="Home" value="Home" control={<Radio />} label="Home" />
-                            <FormControlLabel className='radiofont'name="Work" value="Work" control={<Radio />} label="Work" />
-                            <FormControlLabel className='radiofont' name="Other" value="Other" control={<Radio />} label="Other" />
+                            <FormControlLabel onChange={(e) => changeState(e)} className='radiofont' name="address_type" value="Home" control={<Radio />} label="Home" />
+                            <FormControlLabel onChange={(e) => changeState(e)} className='radiofont'name="address_type" value="Work" control={<Radio />} label="Work" />
+                            <FormControlLabel onChange={(e) => changeState(e)} className='radiofont' name="address_type" value="Other" control={<Radio />} label="Other" />
                         </RadioGroup>
                     </FormControl>
                 </div>
 
-                <div className="continuebutton" >
-                    <Button onClick={next} style={{
+                <div  className="continuebutton" >
+                    <Button onClick={orderSummery} style={{
                         width: '150px',
                         height: '35px',
                         backgroundColor: '#3371B5',
@@ -161,9 +170,54 @@ function CustomerDetails(props) {
                         textTransform: 'none'
                     }}>CONTINUE</Button>
                 </div>
-
+                
             </div>
+            
         </div>
+        
+                                {/* <div>      
+                        
+                        <div className='ordercontainer'>
+                            <div >
+                                <span className='addressbuttons'>Order Summary</span>
+                            </div>
+
+
+                            <div className='cartDetails'>
+                                <img className='cartimage' src={bookImage}></img>
+                                <div className='bookdetails'>
+                                    <span className='bookname'>{props.arrayCart.name}</span>
+                                    <span className='author'>by{props.arrayCart.author}</span>
+                                    <span className='price'> Rs.{props.arrayCart.Price}</span>
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div className="continuebutton"  >
+                                <Button className="continuebutton" style={{
+                                    width: '150px',
+                                    height: '35px',
+                                    backgroundColor: '#3371B5',
+                                    color: '#FFFFFF',
+                                    fontSize: '14px',
+                                    marginTop: '5px',
+
+                                }}>CHECKOUT</Button>
+                            </div>
+                        </div>
+                    </div>
+                    :
+                    <div className="customertext">
+                        <span className='customerAddress'>Order Summary</span>
+                    </div>
+            }
+            </div> */}
+        </div>
+
     );
 }
+
 export default CustomerDetails;

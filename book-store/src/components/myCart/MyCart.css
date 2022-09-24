@@ -60,7 +60,7 @@
     flex-direction: row;
     width: auto;
     height: 89px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 20px;
 }
 
@@ -228,9 +228,10 @@
 .ordercontainer{
     width:774px;
     height: auto;
-    margin-left: 175px;
+    margin-left: -390px;
+    
     border: 1px solid #DCDCDC;
-    margin-top: 45px;
+    margin-top: 20px;
     margin-bottom: 25px;
 }
 
@@ -249,6 +250,7 @@ opacity: 1;
 .orderPlace {
     top: 378px;
 margin-left: -390px;
+
 margin-top: 10px;
 width: 770px;
 height: 60px;

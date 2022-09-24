@@ -7,7 +7,7 @@ import './Dashboard.css';
 const bookService = new BookService();
 
 function Dashboard(props) {
-    const [view, setView] = useState(true);
+    const [view, setView] = useState(false);
     const [bookArray, setBookArray] = useState([]);
     const [selectedBook, setSelectedBook] = useState("");
 
@@ -29,7 +29,7 @@ function Dashboard(props) {
         <>
             <Header/>
             
-                
+    {/* {view ? */}
 
             
             <div className='Heading'>
@@ -51,6 +51,7 @@ function Dashboard(props) {
                 <Displaybook key={index} bookArray={book} getBooks={getBooks} />
             
             ))}
+       
         </div>
         </div>
         

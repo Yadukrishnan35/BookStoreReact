@@ -5,36 +5,28 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../../components/header/Header';
 import bookImage from '../../Images/bookImage.png';
 import BookService from '../../services/BookService';
+import CartService from '../../services/CartService';
 import './GetBookById.css';
-
+const cartService = new CartService();
   //const bookService = new BookService();
 function GetBookById(props) {
-    console.log(props);
-//     const navigate = useNavigate();
-//   const [bookdata,setBookdata] = useState([]);
-//     const getBookById = (props) => {
-//         console.log(props.bookArray.name)
-//         let data = {
-//           "id":props.bookArray.id
-          
-//         }
-    
-//         console.log("GetBookById is calling");
-//                    console.log(data);
-//         bookService.getBookById(data).then((response) => {
-//           console.log(response);
-//           navigate('/getBookByid')
-//           setBookdata(response.data.data);  
+    const addToCart = (props) => {
+        console.log(props)
+        let data = {
+
+            'book_id': props.bookdata.id
+        }
+        console.log("AddToCart is Calling");
+        console.log(data);
+        cartService.addBookToCart(data)
             
-//           console.log(response);
-//             }).catch((error) =>{
-//               console.log(error);
-//             })
-//       }
-    
-    //   useEffect(() => {
-    //     getBookById()
-    //   }, [])
+            .then((res) => {
+                console.log(res);
+
+            }).catch((err) => {
+                console.log(err);
+            })
+    }
     return (
         <>
          <Header></Header>
@@ -50,7 +42,7 @@ function GetBookById(props) {
         </div>
         <div className='leftSection-BookDetailBottom'>
 
-<input type="button" value="ADD TO BAG" className='addToBag' />
+<input onClick={() => addToCart(props)} type="button"  value="ADD TO BAG" className='addToBag' />
 <input type="button" value="WISHLIST" className='wishlist' />
 </div>
 </div>

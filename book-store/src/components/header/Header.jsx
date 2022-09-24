@@ -39,18 +39,20 @@ function Header(props) {
                 </TextField>
             </div>
             <div className='cartIcon'>
-                <div>
-                <BsPerson size="2rem" color='white'/>
-                <div style={{marginBottom:-10}}>
-                Person
-                </div>
-            </div>                
             <div onClick={cart}>
             <AiOutlineShoppingCart size="2rem" color='white'/>
             <div style={{marginBottom:-10}}>
             Cart
             </div>
             </div>
+                
+                <div>
+                <BsPerson size="2rem" color='white'/>
+                <div style={{marginBottom:-10}}>
+                Person
+                </div>
+            </div>                
+            
             </div>
             
         </Toolbar>

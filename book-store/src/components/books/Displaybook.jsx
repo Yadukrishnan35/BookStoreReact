@@ -36,8 +36,8 @@ function Displaybook(props) {
     bookService.getBookById(data).then((response) => {
       console.log(response);
       setBookdata(response.data.book);
-      SetView(true);
-      //  navigate('/getBookByid')
+       SetView(true);
+        // navigate('/getBookByid')
 
     }).catch((error) => {
       console.log(error);
@@ -47,8 +47,7 @@ function Displaybook(props) {
   return (
     <>
       {view == false ?
-        
-        <div className="bookAlign">
+      <div className="bookAlign">
       <div className="bookContainer" style={{ animation: TouchRipple }} onClick={() => getBookById(props)}>
         <div>
           <div className="books">
@@ -74,6 +73,7 @@ function Displaybook(props) {
       </div>
     </div>
     :<GetBookById bookdata={bookdata} />
+  
       }
 
     </>

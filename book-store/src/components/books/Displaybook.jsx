@@ -16,39 +16,41 @@ import GetBookById from '../../pages/GetBookById/GetBookById';
 const bookService = new BookService();
 function Displaybook(props) {
   const navigate = useNavigate();
-  const [bookdata, setBookdata] = useState("");
+  // const [bookdata, setBookdata] = useState("");
   const [view, SetView] = useState(false);
+ 
 
   // useEffect(() => {
   //   getBookById();
   // }, [])
 
-  const getBookById = (props) => {
-    console.log(props.bookArray.name)
-    console.log(props.bookArray.author)
-    let data = {
-      "id": props.bookArray.id
+  // const getBookById = (props) => {
+  //   console.log(props.bookArray.name)
+  //   console.log(props.bookArray.author)
+  //   let data = {
+  //     "id": props.bookArray.id
 
-    }
+  //   }
 
-    console.log("GetBookById is calling");
-    console.log(data);
-    bookService.getBookById(data).then((response) => {
-      console.log(response);
-      setBookdata(response.data.book);
-       SetView(true);
-        // navigate('/getBookByid')
+  //   console.log("GetBookById is calling");
+  //   console.log(data);
+  //   bookService.getBookById(data).then((response) => {
+  //     console.log(response);
+  //     setBookdata(response.data.book);
+  //      SetView(true);
+  //       // navigate('/getBookByid')
 
-    }).catch((error) => {
-      console.log(error);
-    })
-  }
-
+  //   }).catch((error) => {
+  //     console.log(error);
+  //   })
+  // }
+  const bookDetail = (data) => {
+    // props.listenToBooks(true);
+    props.listenToEachBook(data);
+}
   return (
-    <>
-      {view == false ?
-      <div className="bookAlign">
-      <div className="bookContainer" style={{ animation: TouchRipple }} onClick={() => getBookById(props)}>
+         <div className="bookAlign">
+      <div className="bookContainer" style={{ animation: TouchRipple }} onClick={() => bookDetail(props.bookArray)}>
         <div>
           <div className="books">
             <div className="booksImage">
@@ -72,11 +74,9 @@ function Displaybook(props) {
         </div>
       </div>
     </div>
-    :<GetBookById bookdata={bookdata} />
-  
-      }
+    
 
-    </>
+    
     );
 }
 

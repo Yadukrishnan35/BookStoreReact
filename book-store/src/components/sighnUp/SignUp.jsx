@@ -1,6 +1,5 @@
 import { Button, TextField } from '@mui/material';
 import React from 'react';
-//import UserService from '../../services/UserService';
 import UserService from '../../services/UserService';
 import './SignUp.css';
 const userservice = new UserService();
@@ -173,7 +172,8 @@ function SignUp(props) {
         </div>
       </div>
     </div>
-        </div>
-    );
+   </div>
+  );
 }
+
 export default SignUp;

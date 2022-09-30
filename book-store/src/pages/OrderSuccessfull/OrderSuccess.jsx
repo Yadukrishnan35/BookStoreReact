@@ -35,12 +35,6 @@ function OrderSuccess(props) {
                 <Link to='/dashboard'>
                     <Button variant="contained" className='continueShopping-btn' >Continue Shopping</Button>
                 </Link>
-                
-    
-                {/* <a href={'/Home'} className='continueShopping-btn'>Continue Shopping</a> */}
-                {/* <Routes>
-                    <Route path='/Home' element={<Home/>}/>
-                </Routes> */}
             </div>
         </div>
       )

@@ -73,12 +73,10 @@
    
     color: #0A0102;
 }
-
 .author {
     width: auto;
     height: 12px;
     font-family: Arial, Helvetica, sans-serif;
-    /* UI Properties */
     text-align: left;
     font-size: 12px;
     letter-spacing: 0px;
@@ -86,18 +84,14 @@
     color: #9D9D9D;
     opacity: 1;
 }
-
 .price {
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-   
-   
     margin-top: 5px;
     color: #0A0102;
 }
 .continuebutton{
     display: flex;
-   margin-top: 25px;
+    margin-top: 25px;
     margin-left: 620px;
-  
 }

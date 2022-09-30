@@ -165,22 +165,13 @@
 .addressinput {
     margin-left: 35px;
     margin-bottom: 30px;
-   
-   
 }
-
 .fullnameAndMobile {
     display: flex;
 
 }
-
-
 .textfield-address {
     width: 512px;
-    /* height: 82px; */
-   
-    /* UI Properties */
-    /* background: #FFFFFF 0% 0% no-repeat padding-box; */
     border: none;
     border-radius: 2px;
     opacity: 1;
@@ -188,13 +179,11 @@
 }
 .addresstypefield{
     margin-top: 20px;
-  
 }
 .continuebutton{
     display: flex;
-   margin-top: 25px;
+    margin-top: 25px;
     margin-left: 620px;
-  
 }
 .radiofont{
     font: normal normal normal 12px/16px Roboto;
@@ -229,34 +218,29 @@
     width:774px;
     height: auto;
     margin-left: -390px;
-    
     border: 1px solid #DCDCDC;
     margin-top: 20px;
     margin-bottom: 25px;
 }
-
 .addressPlace {
-top: 378px;
-margin-left: -390px;
-margin-top: 10px;
-width: 770px;
-height: 60px;
-/* UI Properties */
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 1px solid #DCDCDC;
-border-radius: 1px;
-opacity: 1;
+    top: 378px; 
+    margin-left: -390px;
+    margin-top: 10px;
+    width: 770px;
+    height: 60px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+    border-radius: 1px;
+    opacity: 1;
 }
 .orderPlace {
     top: 378px;
-margin-left: -390px;
-
-margin-top: 10px;
-width: 770px;
-height: 60px;
-/* UI Properties */
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 1px solid #DCDCDC;
-border-radius: 1px;
-opacity: 1;
+    margin-left: -390px;
+    margin-top: 10px;
+    width: 770px;
+    height: 60px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+    border-radius: 1px;
+    opacity: 1;
 }

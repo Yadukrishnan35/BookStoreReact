@@ -1,6 +1,5 @@
 import { Button, TextField } from '@mui/material';
 import { width } from '@mui/system';
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserService from '../../services/UserService';
@@ -13,11 +12,8 @@ function ForgetPassword(props) {
     };
     const[text,setText] =React.useState({
         email:'',
-        // password:'',
-        // emailError:false,
-        // passwordError:false,
+        
     })
-
     const changeState = (event) => {
         setText(previousValue => {
           return {...previousValue,[event.target.name]:event.target.value}
@@ -27,16 +23,12 @@ function ForgetPassword(props) {
     const next = () => {
         let data = {
             "email":text.email
-    
     }
     console.log("Forget is calling");
                console.log(data);
                userservice.forget(data).then((response) => {
-                    
-                console.log(response);
-
-                    
-                  }).catch((error) =>{
+                    console.log(response);
+                }).catch((error) =>{
                     console.log(error);
                   })
             }
@@ -50,7 +42,6 @@ function ForgetPassword(props) {
             <div class="centrebox">
             <div class="box_with_paddingg">  
             <div>
-               
                <div className='paragraph'>
                <span
                 >Enter your email address and we'll send you a link to reset
@@ -73,9 +64,7 @@ function ForgetPassword(props) {
                 <div>
                   <Button onClick={signUp} style={{width:300,marginTop:70,fontSize:20,fontWeight:'bold',color:"black"}}
                     >CREATE ACCOUNT</Button>
-                  
                 </div>
-                 
             </div>
             </div> 
             </div>

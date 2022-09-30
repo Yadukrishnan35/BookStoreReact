@@ -2,8 +2,6 @@ import { Button, Link, TextField } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserService from '../../services/UserService';
-//import DashBar from '../dashboard/DashBar';
-//import UserService from '../../services/UserService';
 import './Login.css';
 const userservice = new UserService();
 function Login() {
@@ -64,7 +62,7 @@ function Login() {
                 variant="outlined"
                 size="small"
                 error = {text.emailError}
-            helperText={text.emailError == true ? 'Email is required':''}
+                helperText={text.emailError == true ? 'Email is required':''}
                 onChange={(e) => changeState(e)}
 
             />
@@ -88,24 +86,20 @@ function Login() {
             </div>
             </Button>
             </div>
-   
-      <div>
+    <div>
       <p>--------<b>OR</b>--------</p>
-      </div>
-      <div className='other_btn' >
+    </div>
+    <div className='other_btn' >
       <button
       className='facebook_btn'
       >Facebook</button>
-      
       <button 
        className='google_btn'
        >Google
-
-       </button>
-        </div>
-        </div>
-
-    )
+      </button>
+    </div>
+  </div>
+  )
 }
 
 export default Login;

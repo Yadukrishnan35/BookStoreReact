@@ -39,10 +39,7 @@ function CustomerDetails(props) {
         console.log("Customer is calling");
         console.log(data);
         userservice.address(data).then((response) => {
-
             console.log(response);
-            //setOrderSummery(true);
-
         }).catch((error) => {
             console.log(error);
         })
@@ -84,21 +81,16 @@ function CustomerDetails(props) {
                             id="outlined-multiline-static"
                             label="Address"
                             name="Address"
-
                             style={{ paddingBottom: '20px', paddingRight: '10px', width: '475px' }}
-
                             size='small'
                             variant="outlined"
                             onChange={(e) => changeState(e)}
-
                         />
-
                     </div>
                     <TextField
                         id="outlined-basic"
                         label="City"
                         name="City"
-
                         className='textfields'
                         style={{ paddingBottom: '20px', paddingRight: '10px', width: '240px' }}
                         size='small'
@@ -122,7 +114,6 @@ function CustomerDetails(props) {
                             id="outlined-basic"
                             label="State"
                             name="State"
-
                             className='textfields'
                             style={{ paddingBottom: '20px', paddingRight: '10px', width: '240px' }}
                             size='small'
@@ -130,17 +121,14 @@ function CustomerDetails(props) {
                             onChange={(e) => changeState(e)}
 
                         />
-
                         <TextField
                             id="outlined-basic"
                             label="PinCode"
                             name="Pincode"
-
                             className='textfields'
                             size='small'
                             variant="outlined"
                             onChange={(e) => changeState(e)}
-
                         />
                     </div>
                 </div>
@@ -170,52 +158,9 @@ function CustomerDetails(props) {
                         textTransform: 'none'
                     }}>CONTINUE</Button>
                 </div>
-                
             </div>
-            
         </div>
-        
-                                {/* <div>      
-                        
-                        <div className='ordercontainer'>
-                            <div >
-                                <span className='addressbuttons'>Order Summary</span>
-                            </div>
-
-
-                            <div className='cartDetails'>
-                                <img className='cartimage' src={bookImage}></img>
-                                <div className='bookdetails'>
-                                    <span className='bookname'>{props.arrayCart.name}</span>
-                                    <span className='author'>by{props.arrayCart.author}</span>
-                                    <span className='price'> Rs.{props.arrayCart.Price}</span>
-                                </div>
-
-
-                            </div>
-
-
-
-                            <div className="continuebutton"  >
-                                <Button className="continuebutton" style={{
-                                    width: '150px',
-                                    height: '35px',
-                                    backgroundColor: '#3371B5',
-                                    color: '#FFFFFF',
-                                    fontSize: '14px',
-                                    marginTop: '5px',
-
-                                }}>CHECKOUT</Button>
-                            </div>
-                        </div>
-                    </div>
-                    :
-                    <div className="customertext">
-                        <span className='customerAddress'>Order Summary</span>
-                    </div>
-            }
-            </div> */}
-        </div>
+    </div>
 
     );
 }

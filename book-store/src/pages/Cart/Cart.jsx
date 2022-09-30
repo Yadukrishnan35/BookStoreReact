@@ -5,16 +5,13 @@ import OrderSummery from '../../components/OrderSummery/OrderSummery';
 import CartService from '../../services/CartService';
 const cartService = new CartService();
 function Cart(props) {
+    
     const [cartArray, setcartArray] = useState([])
-    //const navigate = useNavigate();
+   
     useEffect(() => {
         getCartList();
     }, [])
-
-    //   const goToDashBoard = () => {
-    //     navigate('/dashboard')
-    // }
-
+    
     const getCartList = () => {
         cartService.getAllBooksFromCart()
             .then((res) => {
@@ -24,13 +21,10 @@ function Cart(props) {
                 console.log(err);
             })
     }
-
-
+    
     return (
         <div>
             <Header />
-            {/* <span onClick={goToDashBoard} className='homecart'>Home / Cart</span> */}
-
             {cartArray.length > 0 && cartArray.map((cart, index) => (
                 <MyCart key={index} arrayCart={cart} getcart={getCartList} />
                 

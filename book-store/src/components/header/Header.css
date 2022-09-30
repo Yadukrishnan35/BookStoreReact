@@ -1,16 +1,14 @@
 .Search {
     border-radius: 5px;   
    }
-   .cartIcon {
+.cartIcon {
     display:flex;
     flex-direction: row;
     margin-left: 60px;
     gap: 40px;
-    /* margin-top: 20px; */
-
-   } 
-
-   .profile {
+    } 
+    
+.profile {
     margin-left: 50px;
     display: flex;
     flex-direction: column;
@@ -20,23 +18,19 @@
     size: 100px;
     
   }
-  
-  .profile-name {
+.profile-name {
     font-size: 13px;
     color: #FFFFFF;
     padding-top: 5px;
   }
-  
-  
-  .Logout{
+.Logout{
     margin-left: 20px;
     font-size: 14px;
     font-stretch: condensed;
     font-weight: 600;
   }
-  .MyWishlist{
+.MyWishlist{
     font-size: 14px;
     font-weight: 600;
-
-  }
+}
  

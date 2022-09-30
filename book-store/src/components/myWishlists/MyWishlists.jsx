@@ -4,9 +4,8 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import './MyWishlists.css';
 import CartService from '../../services/CartService';
 const cartService = new CartService()
-
-
 function MyWishlists(props) {
+    
     const [wishlistArray, setwishlistArray] = useState([])
     
     useEffect(() => {
@@ -58,16 +57,11 @@ function MyWishlists(props) {
                             </div>
                         </div>
                         <div className="wishlistBookDeleteIcon" onClick={() => removeWishlist(props)}  >
-
-                            <DeleteOutlineIcon 
-
-                            />
+                            <DeleteOutlineIcon/>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     );
 }

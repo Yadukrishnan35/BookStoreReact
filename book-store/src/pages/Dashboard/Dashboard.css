@@ -2,7 +2,6 @@
     margin-left: -620px;
     margin-bottom: 100px;
     font-weight: bold;
-    /* margin-top: 500px; */
 }
 .getbooks {
     display: flex;
@@ -11,25 +10,17 @@
     margin-left: -400px;
     gap:20px;
 }
-
 .bookscontainer1 {
-
-
     display: flex;
     flex-direction: row;
-
     margin-left: -10px;
     margin-top: -80px;
-    /* max-width: 540px; */
-
 }
-
 .dropDownMenu {
     margin-left: 850px;
     border-color: #878787;
     opacity: 1;
 }
-
 .Heading {
     margin-top: 100px;
     margin-bottom: 100px;

@@ -8,8 +8,11 @@ import CustomerDetails from './components/customerDetails/CustomerDetails';
   //import DashBar from './components/dashboard/DashBar';
 import ForgetPassword from './components/forgetPassword/ForgetPassword';
 import MyCart from './components/myCart/MyCart';
+import MyWishlists from './components/myWishlists/MyWishlists';
 import OrderSummery from './components/OrderSummery/OrderSummery';
+
 import Cart from './pages/Cart/Cart';
+import Wishlists from './pages/wishlists/wishlists.jsx';
 import Dashboard from './pages/Dashboard/Dashboard';
 import GetBookById from './pages/GetBookById/GetBookById';
 import HomePage from './pages/HomePage';
@@ -28,7 +31,8 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/customer' element={<CustomerDetails/>}/>
         <Route path='/orderSuccess' element={<OrderSuccess/>}/>
-        <Route path='/ordersummery' element={<OrderSummery/>}/>
+        <Route path='/getallwishlist' element={<Wishlists/>}/>
+        
       </Routes>
         </BrowserRouter>
 {/* <HomePage></HomePage>             */}

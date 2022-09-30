@@ -4,8 +4,39 @@
    .cartIcon {
     display:flex;
     flex-direction: row;
-    margin-left: 210px;
+    margin-left: 60px;
     gap: 40px;
     /* margin-top: 20px; */
 
    } 
+
+   .profile {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    size: 100px;
+    
+  }
+  
+  .profile-name {
+    font-size: 13px;
+    color: #FFFFFF;
+    padding-top: 5px;
+  }
+  
+  
+  .Logout{
+    margin-left: 20px;
+    font-size: 14px;
+    font-stretch: condensed;
+    font-weight: 600;
+  }
+  .MyWishlist{
+    font-size: 14px;
+    font-weight: 600;
+
+  }
+ 

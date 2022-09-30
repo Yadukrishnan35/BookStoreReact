@@ -26,7 +26,24 @@ function GetBookById(props) {
             }).catch((err) => {
                 console.log(err);
             })
+
     }
+
+    const addToWishlist = (props) => {
+        console.log(props)
+        let data = {
+
+            'book_id': props.bookdata.id
+        }
+        cartService.addBookToWishlist(data)
+            .then((res) => {
+                console.log(res);
+
+            }).catch((err) => {
+                console.log(err);
+            })
+    }
+
     return (
         <>
          <Header></Header>
@@ -43,7 +60,7 @@ function GetBookById(props) {
         <div className='leftSection-BookDetailBottom'>
 
 <input onClick={() => addToCart(props)} type="button"  value="ADD TO BAG" className='addToBag' />
-<input type="button" value="WISHLIST" className='wishlist' />
+<input onClick={() => addToWishlist(props)} type="button" value="WISHLIST" className='wishlist' />
 </div>
 </div>
 

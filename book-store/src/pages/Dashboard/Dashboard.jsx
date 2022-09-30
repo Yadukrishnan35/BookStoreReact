@@ -14,15 +14,23 @@ function Dashboard(props) {
     //const [selectedBook, setSelectedBook] = useState("");
     const [bookdata, setBookdata] = useState("");
     const [page, setpage] = useState(1);
+    const [search, setSearch] = useState("");
     useEffect(() => {
         getBooks();
-    }, [])
+    }, [search])
 
     const getBooks = () => {
         setView(true);
         bookService.getAllBooks().then((response)=> {
                 console.log(response);
-                setBookArray(response.data.books)
+                if (search) {
+
+                    let filterBook = response.data.books.filter(books => books.name.toLowerCase().includes(search.toLowerCase()))
+                    setBookArray(filterBook)
+                } else {
+                    setBookArray(response.data.books)
+                }
+               
         }).catch((error) =>{
             console.log(error);
         })
@@ -39,6 +47,9 @@ function Dashboard(props) {
         paginate.jump(page)
     };
 
+    const searchBook = (value) => {
+        setSearch(value)
+    }
 
     const listenToEachBook = (data) => {
        console.log("Listen to Book is calling..")
@@ -74,7 +85,7 @@ function Dashboard(props) {
 
     return (
         <>
-            <Header/>
+            <Header search={searchBook} />
             
     {view ?<div>
 
